@@ -4,29 +4,31 @@ package br.com.dio.desafio.domini;
 
 public class Curso extends Conteudo {
     
-    private  int cargahoraria;
-
-    public Curso(){
-
-    }
-    
-    
-    public int getCargahoraria() {
-        return cargahoraria;
-    }
-    public void setCargahoraria(int cargahoraria) {
-        this.cargahoraria = cargahoraria;
-    }
-    @Override
-    public String toString() {
-        return "Curso [titulo = " + getTitulo() + ", descricao = " + getDescricao() + ", cargahoraria = " + cargahoraria + "]";
-    }
-
+    private int cargaHoraria;
 
     @Override
     public double calcularXp() {
-        // TODO Auto-generated method stub
-        return 0;
+        return XP_PADRAO * cargaHoraria;
     }
 
+    public Curso() {
+    }
+
+
+    public int getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
+                ", cargaHoraria=" + cargaHoraria +
+                '}';
+    }
 }
